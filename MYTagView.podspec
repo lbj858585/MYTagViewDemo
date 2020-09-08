@@ -68,7 +68,7 @@ Pod::Spec.new do |spec|
 
   # spec.platform     = :ios
   # 支持的pod的最低系统版本（已过期），改为使用s.platform
-  s.platform     = :ios, "9.0"
+  spec.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
