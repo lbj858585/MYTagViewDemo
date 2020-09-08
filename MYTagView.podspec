@@ -83,7 +83,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
   # 项目的地址（这个必须写正确）
-  spec.source       = { :git => "https://github.com/lbj858585/MYTagViewDemo.git", :tag => s.version }
+  spec.source       = { :git => "https://github.com/lbj858585/MYTagViewDemo.git", :tag => spec.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
