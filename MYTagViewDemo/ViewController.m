@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TagViewController.h"
+#import "Masonry.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @end

@@ -12,7 +12,7 @@
 #import "MYTagViewConfig.h"
 #import "MYTagFlowHeaderView.h"
 #import "MYTagFlowCell.h"
-#import <Masonry.h>
+
 static NSString *const cellId = @"cellId";
 static NSString *const headerId = @"flowHeaderID";
 

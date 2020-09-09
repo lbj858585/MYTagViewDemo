@@ -48,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F1D5BE4250859B300B65D54 /* HeaderFiles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderFiles.h; sourceTree = "<group>"; };
 		0F47EC152507705700282036 /* MYTagViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYTagViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F47EC182507705700282036 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0F47EC192507705700282036 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -127,6 +128,7 @@
 		0F47EC0C2507705700282036 = {
 			isa = PBXGroup;
 			children = (
+				0F47EC69250772E500282036 /* MYTagView */,
 				0F47EC172507705700282036 /* MYTagViewDemo */,
 				0F47EC332507705C00282036 /* MYTagViewDemoTests */,
 				0F47EC3E2507705C00282036 /* MYTagViewDemoUITests */,
@@ -149,7 +151,6 @@
 		0F47EC172507705700282036 /* MYTagViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				0F47EC69250772E500282036 /* MYTagView */,
 				0F47EC182507705700282036 /* AppDelegate.h */,
 				0F47EC192507705700282036 /* AppDelegate.m */,
 				0F47EC1B2507705700282036 /* SceneDelegate.h */,
@@ -200,6 +201,7 @@
 				0F47EC6E250772E500282036 /* Cell */,
 				0F47EC74250772E500282036 /* Model */,
 				0F47EC79250772E500282036 /* Header */,
+				0F1D5BE4250859B300B65D54 /* HeaderFiles.h */,
 			);
 			path = MYTagView;
 			sourceTree = "<group>";
@@ -209,8 +211,8 @@
 			children = (
 				0F47EC72250772E500282036 /* MYTagFlowCell.h */,
 				0F47EC70250772E500282036 /* MYTagFlowCell.m */,
-				0F47EC6F250772E500282036 /* MYTestCollectionViewCell.m */,
 				0F47EC71250772E500282036 /* MYTestCollectionViewCell.h */,
+				0F47EC6F250772E500282036 /* MYTestCollectionViewCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -675,6 +677,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 47167C41FA0165E62EAC79FE /* Pods-MYTagViewDemo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MYTagViewDemo/PrefixHeader.pch";
@@ -693,6 +696,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0A72310E6B64B11A410D3DB /* Pods-MYTagViewDemo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MYTagViewDemo/PrefixHeader.pch";

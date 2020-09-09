@@ -8,6 +8,7 @@
 
 #import "TagViewController.h"
 #import "MYTagFlowView.h"
+#import "Masonry.h"
 @interface TagViewController ()<MYTagFlowViewDelegate>
 @property (nonatomic, strong) MYTagFlowView *recordView;
 @end

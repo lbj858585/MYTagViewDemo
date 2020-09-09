@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   # 名称，pod search搜索的关键词,注意这里一定要和pod spec create MYTagView中的名称一样,否则报错
   spec.name         = "MYTagView"
   # 版本号
-  spec.version      = "0.0.1"
+  spec.version      = "1.0.0"
   # 库的简介
   spec.summary      = "简单标签选择，MYTagView"
 
@@ -26,10 +26,10 @@ Pod::Spec.new do |spec|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
-                   DESC
+ # spec.description  = <<-DESC
+             #      DESC
 
-  spec.homepage     = "http://EXAMPLE/MYTagView"
+  spec.homepage     = "https://www.apple.com"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -40,8 +40,8 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  # 许可证 （固定写法，还不清楚为什么要这样写）
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -95,10 +95,10 @@ Pod::Spec.new do |spec|
   #
   # 需要包含的源文件
   spec.source_files  = "MYTagView", "MYTagView/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.exclude_files = "MYTagView/Exclude"
 
-  # spec.public_header_files = "Classes/**/*.h"
-
+  spec.public_header_files = 'MYTagView/HeaderFiles.h'
+  spec.source_files = 'MYTagView/HeaderFiles.h'
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -120,7 +120,7 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
   # 用到的系统库
-  spec.framework  = "Masonry"
+  # spec.framework  = "Framework"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
 
   # spec.library   = "iconv"
@@ -137,5 +137,6 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
-
+  # 用到的第三方库
+  spec.dependency "Masonry"
 end
