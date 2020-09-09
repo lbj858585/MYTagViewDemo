@@ -47,7 +47,7 @@
 }
 
 - (void)initData {
-    NSArray *array = @[@"测试",@"测试",@"测试",@"测试",@"测试",@"测试",@"测试",@"测试"];
+    NSArray *array = @[@"测试",@"测试测试",@"测试测试测试",@"测试测",@"测试测试测",@"测试测试测试测试",@"测试测试",@"测测试试"];
     NSMutableArray *rowArray = [NSMutableArray array];
     for (NSString *str in array) {
         MYTagFlowViewModel *model = [MYTagFlowViewModel new];
