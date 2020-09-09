@@ -8,7 +8,7 @@
 
 #import "MYTagFlowHeaderView.h"
 #import "Masonry.h"
-
+#import "HeaderFiles.h"
 @interface MYTagFlowHeaderView ()
 @property (nonatomic, strong) UIImageView *leftIV;
 @property (nonatomic, strong) UILabel *title;

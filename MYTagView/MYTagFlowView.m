@@ -77,7 +77,7 @@ static NSString *const headerId = @"flowHeaderID";
     [self addSubview:self.pageControl];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self);
-        make.width.equalTo(SCREEN_WIDTH);
+        make.width.equalTo(@(SCREEN_WIDTH));
         make.top.equalTo(self).offset(self.config.itemTopMargin);
         make.bottom.offset(-self.config.itemBottomMargin).priorityHigh();
     }];
@@ -85,7 +85,7 @@ static NSString *const headerId = @"flowHeaderID";
     [self.pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.offset(0);
         make.centerX.equalTo(self);
-        make.height.equalTo(10);
+        make.height.equalTo(@(10));
     }];
 }
 
@@ -171,7 +171,7 @@ static NSString *const headerId = @"flowHeaderID";
         }
     }
     
-    return nil;
+    return [UICollectionReusableView new];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -214,7 +214,7 @@ static NSString *const headerId = @"flowHeaderID";
             model.select = cell.beSelected;
         }
         if (self.handler && self.selectMark) {
-            NSString *title = @"";
+            NSString *title = @" ";
             NSArray *array = self.data[indexPath.section];
             MYTagFlowViewModel *model = array[indexPath.item];
             title = model.title;
@@ -295,6 +295,7 @@ static NSString *const headerId = @"flowHeaderID";
         _collectionView.backgroundColor = self.config.backgroundColor;
         _collectionView.pagingEnabled = self.config.pagingEnabled;
         _collectionView.scrollsToTop = NO;
+        [_collectionView registerClass:[MYTagFlowHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerId];
     }
     return _collectionView;
 }

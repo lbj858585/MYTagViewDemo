@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   # 名称，pod search搜索的关键词,注意这里一定要和pod spec create MYTagView中的名称一样,否则报错
   spec.name         = "MYTagView"
   # 版本号
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   # 库的简介
   spec.summary      = "简单标签选择，MYTagView"
 
@@ -91,11 +91,11 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
   # 需要包含的源文件
-  spec.source_files  = "MYTagView", "MYTagView/**/*.{h,m}"
+  spec.source_files  = "MYTagView/**/*"
   spec.exclude_files = "MYTagView/Exclude"
 
   spec.public_header_files = 'MYTagView/HeaderFiles.h'
-  spec.source_files = 'MYTagView/HeaderFiles.h'
+  # spec.source_files = 'MYTagView/HeaderFiles.h'
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

@@ -25,6 +25,7 @@
 		0F47EC83250772E500282036 /* MYTagFlowViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F47EC77250772E500282036 /* MYTagFlowViewLayout.m */; };
 		0F47EC84250772E500282036 /* MYTagFlowHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F47EC7B250772E500282036 /* MYTagFlowHeaderView.m */; };
 		0F47EC892507765A00282036 /* TagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F47EC882507765A00282036 /* TagViewController.m */; };
+		0F5F34032508D82600B1DE8F /* MYCollegeItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5F34022508D82600B1DE8F /* MYCollegeItemCell.m */; };
 		7D47F7249B01BA130FDC90B5 /* Pods_MYTagViewDemo_MYTagViewDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313BE37B6B8ED8B9969C92FD /* Pods_MYTagViewDemo_MYTagViewDemoUITests.framework */; };
 		917BBC40FCD987682828CB97 /* Pods_MYTagViewDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A855B14CAD43A7909823F1E3 /* Pods_MYTagViewDemoTests.framework */; };
 		C7575201368AB77DFE437BB1 /* Pods_MYTagViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3F650372A63EC8BA3BB201 /* Pods_MYTagViewDemo.framework */; };
@@ -86,6 +87,8 @@
 		0F47EC862507742300282036 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		0F47EC872507765A00282036 /* TagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagViewController.h; sourceTree = "<group>"; };
 		0F47EC882507765A00282036 /* TagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagViewController.m; sourceTree = "<group>"; };
+		0F5F34012508D82600B1DE8F /* MYCollegeItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYCollegeItemCell.h; sourceTree = "<group>"; };
+		0F5F34022508D82600B1DE8F /* MYCollegeItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYCollegeItemCell.m; sourceTree = "<group>"; };
 		2128D382E4E37E9DA2E602DE /* Pods-MYTagViewDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYTagViewDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-MYTagViewDemoTests/Pods-MYTagViewDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		313BE37B6B8ED8B9969C92FD /* Pods_MYTagViewDemo_MYTagViewDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MYTagViewDemo_MYTagViewDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3F650372A63EC8BA3BB201 /* Pods_MYTagViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MYTagViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +168,8 @@
 				0F47EC262507705C00282036 /* LaunchScreen.storyboard */,
 				0F47EC292507705C00282036 /* Info.plist */,
 				0F47EC2A2507705C00282036 /* main.m */,
+				0F5F34012508D82600B1DE8F /* MYCollegeItemCell.h */,
+				0F5F34022508D82600B1DE8F /* MYCollegeItemCell.m */,
 			);
 			path = MYTagViewDemo;
 			sourceTree = "<group>";
@@ -506,6 +511,7 @@
 				0F47EC1A2507705700282036 /* AppDelegate.m in Sources */,
 				0F47EC81250772E500282036 /* MYTagFlowCell.m in Sources */,
 				0F47EC2B2507705C00282036 /* main.m in Sources */,
+				0F5F34032508D82600B1DE8F /* MYCollegeItemCell.m in Sources */,
 				0F47EC1D2507705700282036 /* SceneDelegate.m in Sources */,
 				0F47EC892507765A00282036 /* TagViewController.m in Sources */,
 				0F47EC82250772E500282036 /* MYTagFlowViewModel.m in Sources */,
