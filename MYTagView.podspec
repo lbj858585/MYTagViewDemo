@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   # 名称，pod search搜索的关键词,注意这里一定要和pod spec create MYTagView中的名称一样,否则报错
   spec.name         = "MYTagView"
   # 版本号
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   # 库的简介
   spec.summary      = "简单标签选择，MYTagView"
 
