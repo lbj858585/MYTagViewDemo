@@ -55,10 +55,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.author             = { "Libj" => "1160337813@qq.com" }
-  # Or just: spec.author    = "^_^o~ 努力！"
-  # spec.authors            = { "^_^o~ 努力！" => "1074255134@qq.com" }
   # 社交地址
-  # spec.social_media_url   = "https://www.jianshu.com/u/26d77be8ec9d"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -120,7 +117,7 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
   # 用到的系统库
-  # spec.framework  = "Framework"
+   spec.framework  = "UIKit"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
 
   # spec.library   = "iconv"
