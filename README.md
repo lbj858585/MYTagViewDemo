@@ -75,7 +75,14 @@
 ```
 
 效果图
-
+![Alt text](https://github.com/lbj858585/MYTagViewDemo/blob/master/images/1.gif)
+![Alt text](https://github.com/lbj858585/MYTagViewDemo/blob/master/images/2.gif)
+![Alt text](https://github.com/lbj858585/MYTagViewDemo/blob/master/images/3.gif)
+![Alt text](https://github.com/lbj858585/MYTagViewDemo/blob/master/images/4.gif)
+![Alt text](https://github.com/lbj858585/MYTagViewDemo/blob/master/images/5.gif)
+![Alt text](https://github.com/lbj858585/MYTagViewDemo/blob/master/images/6.gif)
+![Alt text](https://github.com/lbj858585/MYTagViewDemo/blob/master/images/7.gif)
+![Alt text](https://github.com/lbj858585/MYTagViewDemo/blob/master/images/8.gif)
 #### 安装 
 1. CocoaPods安装：
 ```
