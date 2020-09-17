@@ -18,5 +18,10 @@
 #define MAS_SHORTHAND_GLOBALS
 // 这个头文件一定要放在上面两个宏的后面
 #import <Masonry.h>
+#import "HeaderFiles.h"
+
+#define NavigationBar_StatusBar_Height ((SCREEN_HEIGHT >= 812.0f) ? 88 : 64)
+
+
 
 #endif /* PrefixHeader_pch */

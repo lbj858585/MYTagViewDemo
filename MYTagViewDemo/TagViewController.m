@@ -39,30 +39,39 @@
     _type = type;
     self.config = [MYTagViewConfig new];
     if (type == TagType_radio) {
-         self.recordView.selectMark = YES;
-       self.recordView.multipleMark = NO;
+         self.config.selectMark = YES;
+       self.config.multipleMark = NO;
     }else if (type == TagType_check) {
-        self.recordView.selectMark = YES;
-        self.recordView.multipleMark = YES;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            MYTagFlowViewModel *model = [MYTagFlowViewModel new];
+            model.title = @"蜜汁";
+            [self.recordView insertWithModel:model atSection:0 atIndex:23 animated:YES];
+        });
+        
     }else if (type == TagType_disable) {
-        self.recordView.selectMark = NO;
+        self.config.selectMark = NO;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            MYTagFlowViewModel *model = [MYTagFlowViewModel new];
+            model.title = @"蜜汁";
+            
+            MYTagFlowViewModel *model2 = [MYTagFlowViewModel new];
+            model2.title = @"蜜汁2";
+            
+            NSMutableIndexSet *set = [[NSMutableIndexSet alloc] init];
+            [set addIndex:1];
+            [set addIndex:5];
+            [self.recordView insertWithModels:@[model,model2] atSection:0 atIndexes:set animated:YES];
+        });
     }else if (type == TagType_MaxHeight) {
-        self.recordView.selectMark = YES;
-        self.recordView.multipleMark = YES;
         self.recordView.maxHeight = 200;
     }else if (type == TagType_Horizontal) {
         self.config.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        self.recordView.selectMark = YES;
-        self.recordView.multipleMark = YES;
     }else if (type == TagType_header) {
         self.config.sectionHeight = 40;
-        self.recordView.selectMark = YES;
-        self.recordView.multipleMark = YES;
+
     }else if (type == TagType_item) {
         self.config.itemCornerRaius = 5;
         self.config.itemSelectedColor = [UIColor blueColor];
-        self.recordView.selectMark = YES;
-        self.recordView.multipleMark = YES;
         self.recordView.delegate = self;
     }else if (type == TagType_menu) {
         self.config.itemHeight = MY(70);

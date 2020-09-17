@@ -48,11 +48,26 @@ typedef void (^deleteActionHandler)(NSIndexPath *indexPath);
                 sectionTitles:(NSArray *)secTitles
               selectedHandler:(selectedHandler)handler;
 
+- (void)insertWithModel:(MYTagFlowViewModel *)model
+                   atSection:(NSUInteger)section
+                     atIndex:(NSUInteger)index
+                    animated:(BOOL)animated;
+
+- (void)insertWithModels:(NSArray *)models
+                    atSection:(NSUInteger)section
+                    atIndexes:(NSIndexSet*)indexes
+                     animated:(BOOL)animated;
+
+- (void)deleteAtSection:(NSUInteger)section
+                atIndex:(NSUInteger)index
+                  animated:(BOOL)animated;
+
+- (void)deleteAtSection:(NSUInteger)section
+              atIndexes:(NSIndexSet*)indexes
+               animated:(BOOL)animated;
+
 - (void)reloadAllWithTitles:(NSArray *)titles;
 
-@property (nonatomic, assign) BOOL selectMark;  // 选中标记
-/// 多选 (NO 单选，YES 多选)
-@property (nonatomic, assign) BOOL multipleMark;
 @property (nonatomic, copy) deleteActionHandler deleteHandler;//删除block
 @property (nonatomic, weak) id<MYTagFlowViewDelegate> delegate;
 @property (nonatomic, strong) NSIndexPath *selectIndexPath;     // 选中的item

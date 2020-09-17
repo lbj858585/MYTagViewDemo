@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F2D0885250A050F00AB284E /* MYPopupMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D0883250A050F00AB284E /* MYPopupMenuView.m */; };
 		0F47EC1A2507705700282036 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F47EC192507705700282036 /* AppDelegate.m */; };
 		0F47EC1D2507705700282036 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F47EC1C2507705700282036 /* SceneDelegate.m */; };
 		0F47EC202507705700282036 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F47EC1F2507705700282036 /* ViewController.m */; };
@@ -25,6 +26,7 @@
 		0F47EC83250772E500282036 /* MYTagFlowViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F47EC77250772E500282036 /* MYTagFlowViewLayout.m */; };
 		0F47EC84250772E500282036 /* MYTagFlowHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F47EC7B250772E500282036 /* MYTagFlowHeaderView.m */; };
 		0F47EC892507765A00282036 /* TagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F47EC882507765A00282036 /* TagViewController.m */; };
+		0F525B752510B6A200925611 /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F525B742510B6A200925611 /* MenuController.m */; };
 		0F5F34032508D82600B1DE8F /* MYCollegeItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5F34022508D82600B1DE8F /* MYCollegeItemCell.m */; };
 		7D47F7249B01BA130FDC90B5 /* Pods_MYTagViewDemo_MYTagViewDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313BE37B6B8ED8B9969C92FD /* Pods_MYTagViewDemo_MYTagViewDemoUITests.framework */; };
 		917BBC40FCD987682828CB97 /* Pods_MYTagViewDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A855B14CAD43A7909823F1E3 /* Pods_MYTagViewDemoTests.framework */; };
@@ -50,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		0F1D5BE4250859B300B65D54 /* HeaderFiles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderFiles.h; sourceTree = "<group>"; };
+		0F2D0883250A050F00AB284E /* MYPopupMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYPopupMenuView.m; sourceTree = "<group>"; };
+		0F2D0884250A050F00AB284E /* MYPopupMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYPopupMenuView.h; sourceTree = "<group>"; };
 		0F47EC152507705700282036 /* MYTagViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYTagViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F47EC182507705700282036 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0F47EC192507705700282036 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 		0F47EC862507742300282036 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		0F47EC872507765A00282036 /* TagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagViewController.h; sourceTree = "<group>"; };
 		0F47EC882507765A00282036 /* TagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagViewController.m; sourceTree = "<group>"; };
+		0F525B732510B6A200925611 /* MenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
+		0F525B742510B6A200925611 /* MenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuController.m; sourceTree = "<group>"; };
 		0F5F34012508D82600B1DE8F /* MYCollegeItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYCollegeItemCell.h; sourceTree = "<group>"; };
 		0F5F34022508D82600B1DE8F /* MYCollegeItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYCollegeItemCell.m; sourceTree = "<group>"; };
 		2128D382E4E37E9DA2E602DE /* Pods-MYTagViewDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYTagViewDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-MYTagViewDemoTests/Pods-MYTagViewDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +134,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F2D0882250A04FE00AB284E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				0F2D0884250A050F00AB284E /* MYPopupMenuView.h */,
+				0F2D0883250A050F00AB284E /* MYPopupMenuView.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		0F47EC0C2507705700282036 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +169,7 @@
 		0F47EC172507705700282036 /* MYTagViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0F2D0882250A04FE00AB284E /* Tools */,
 				0F47EC182507705700282036 /* AppDelegate.h */,
 				0F47EC192507705700282036 /* AppDelegate.m */,
 				0F47EC1B2507705700282036 /* SceneDelegate.h */,
@@ -162,6 +178,8 @@
 				0F47EC1F2507705700282036 /* ViewController.m */,
 				0F47EC872507765A00282036 /* TagViewController.h */,
 				0F47EC882507765A00282036 /* TagViewController.m */,
+				0F525B732510B6A200925611 /* MenuController.h */,
+				0F525B742510B6A200925611 /* MenuController.m */,
 				0F47EC862507742300282036 /* PrefixHeader.pch */,
 				0F47EC212507705700282036 /* Main.storyboard */,
 				0F47EC242507705C00282036 /* Assets.xcassets */,
@@ -505,6 +523,7 @@
 				0F47EC7E250772E500282036 /* MYTagViewConfig.m in Sources */,
 				0F47EC84250772E500282036 /* MYTagFlowHeaderView.m in Sources */,
 				0F47EC80250772E500282036 /* MYTestCollectionViewCell.m in Sources */,
+				0F525B752510B6A200925611 /* MenuController.m in Sources */,
 				0F47EC202507705700282036 /* ViewController.m in Sources */,
 				0F47EC83250772E500282036 /* MYTagFlowViewLayout.m in Sources */,
 				0F47EC7F250772E500282036 /* MYTagFlowView.m in Sources */,
@@ -515,6 +534,7 @@
 				0F47EC1D2507705700282036 /* SceneDelegate.m in Sources */,
 				0F47EC892507765A00282036 /* TagViewController.m in Sources */,
 				0F47EC82250772E500282036 /* MYTagFlowViewModel.m in Sources */,
+				0F2D0885250A050F00AB284E /* MYPopupMenuView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,6 +708,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MYTagViewDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = MYTagViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -707,6 +728,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MYTagViewDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = MYTagViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

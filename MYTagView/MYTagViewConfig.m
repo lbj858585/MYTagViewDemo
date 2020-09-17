@@ -24,6 +24,8 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
+        self.selectMark = YES;
+        self.multipleMark = YES;
         self.lineSpace = 10;
         self.itemHeight = MY(30);
         self.itemSpace = 10;

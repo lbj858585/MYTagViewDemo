@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "TagViewController.h"
 #import "Masonry.h"
+#import "MenuController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, copy) NSArray *titles;
@@ -26,7 +27,7 @@
 
 - (void) setBaseAttribute {
     self.title = @"MYTagView";
-    self.titles = @[@"单选",@"多选",@"不可选",@"最高限制",@"横向",@"带分组头部",@"自定义item",@"分页"];
+    self.titles = @[@"单选",@"多选",@"不可选",@"最高限制",@"横向",@"带分组头部",@"自定义item",@"分页",@"菜单弹窗"];
 }
 
 - (void) setupSubviews {
@@ -64,6 +65,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == [tableView numberOfRowsInSection:indexPath.section]-1) {
+        MenuController *vc = [MenuController new];
+        [self.navigationController pushViewController:vc animated:YES];
+        return;
+    }
     TagViewController *vc = [TagViewController new];
     vc.type = indexPath.row;
     vc.title = self.titles[indexPath.row];

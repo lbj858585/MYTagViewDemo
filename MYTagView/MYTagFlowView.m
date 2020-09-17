@@ -121,11 +121,6 @@ static NSString *const headerId = @"flowHeaderID";
     }
 }
 
-
-- (void)setSelectMark:(BOOL)selectMark {
-    _selectMark = selectMark;
-}
-
 - (void)setDelegate:(id<MYTagFlowViewDelegate>)delegate {
     _delegate = delegate;
     
@@ -200,27 +195,27 @@ static NSString *const headerId = @"flowHeaderID";
         _selectIndexPath = indexPath;
     }else {
 
-        if (self.selectMark && self.multipleMark == NO) {
+        if (self.config.selectMark && self.config.multipleMark == NO) {
             MYTagFlowCell *oldCell = (MYTagFlowCell *)[collectionView cellForItemAtIndexPath:_selectIndexPath];
             oldCell.beSelected = NO;
             //当前选择的打勾
             MYTagFlowCell *cell = (MYTagFlowCell *)[collectionView cellForItemAtIndexPath:indexPath];
             cell.beSelected = YES;
-        }else if (self.selectMark && self.multipleMark) {
+        }else if (self.config.selectMark && self.config.multipleMark) {
             MYTagFlowCell *cell = (MYTagFlowCell *)[collectionView cellForItemAtIndexPath:indexPath];
             cell.beSelected = !cell.beSelected;
             NSArray *array = self.data[indexPath.section];
             MYTagFlowViewModel *model = array[indexPath.item];
             model.select = cell.beSelected;
         }
-        if (self.handler && self.selectMark) {
+        if (self.handler && self.config.selectMark) {
             NSString *title = @" ";
             NSArray *array = self.data[indexPath.section];
             MYTagFlowViewModel *model = array[indexPath.item];
             title = model.title;
-            if (self.multipleMark && model.select) {
+            if (self.config.multipleMark && model.select) {
                 [self.selectArray addObject:model];
-            }else if (self.multipleMark&& model.select == NO) {
+            }else if (self.config.multipleMark&& model.select == NO) {
                 [self.selectArray removeObject:model];
             }else {
                 if (indexPath != _selectIndexPath) {
@@ -245,7 +240,62 @@ static NSString *const headerId = @"flowHeaderID";
     return model.title;
 }
 
+- (void)insertWithModel:(MYTagFlowViewModel *)model atSection:(NSUInteger)section atIndex:(NSUInteger)index animated:(BOOL)animated {
+    NSAssert(self.data.count>section, @"数组越界");
+    NSMutableArray *array = self.data[section];
+    NSAssert(array.count>=index, @"插入位置越界");
 
+    [self insertWithModels:@[model] atSection:section atIndexes:[NSIndexSet indexSetWithIndex:index] animated:animated];
+}
+
+- (void)insertWithModels:(NSArray *)models atSection:(NSUInteger)section atIndexes:(NSIndexSet *)indexes animated:(BOOL)animated {
+    NSAssert(self.data.count>section, @"数组越界");
+    NSArray *indexPaths = [self indexPathsWithIndexes:indexes atSection:section];
+    [self.data[section] insertObjects:models atIndexes:indexes];
+    [self performBatchUpdatesWithAction:UICollectionUpdateActionInsert indexPaths:indexPaths animated:animated];
+    [self reloadAllWithTitles:self.data];
+}
+
+- (void)deleteAtSection:(NSUInteger)section atIndex:(NSUInteger)index animated:(BOOL)animated {
+    [self deleteAtSection:section atIndexes:[NSIndexSet indexSetWithIndex:index] animated:animated];
+}
+
+- (void)deleteAtSection:(NSUInteger)section atIndexes:(NSIndexSet*)indexes animated:(BOOL)animated {
+    NSArray *indexPaths = [self indexPathsWithIndexes:indexes atSection:section];
+    [self.data[section] removeObjectsAtIndexes:indexes];
+    [self performBatchUpdatesWithAction:UICollectionUpdateActionDelete indexPaths:indexPaths animated:animated];
+    [self reloadAllWithTitles:self.data];
+}
+
+- (NSArray *)indexPathsWithIndexes:(NSIndexSet *)set atSection:(NSUInteger)section {
+    NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:set.count];
+    [set enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:idx inSection:section];
+        [indexPaths addObject:indexPath];
+    }];
+    return [indexPaths copy];
+}
+
+- (void)performBatchUpdatesWithAction:(UICollectionUpdateAction)action indexPaths:(NSArray *)indexPaths animated:(BOOL)animated {
+    if (!animated) {
+        [UIView setAnimationsEnabled:NO];
+    }
+    [self.collectionView performBatchUpdates:^{
+        switch (action) {
+            case UICollectionUpdateActionInsert:
+                [self.collectionView insertItemsAtIndexPaths:indexPaths];
+                break;
+            case UICollectionUpdateActionDelete:
+                [self.collectionView deleteItemsAtIndexPaths:indexPaths];
+            default:
+                break;
+        }
+    } completion:^(BOOL finished) {
+        if (!animated) {
+            [UIView setAnimationsEnabled:YES];
+        }
+    }];
+}
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (!self.pageControl.isHidden) {
         if (!self.data.count) return; 

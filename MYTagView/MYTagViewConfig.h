@@ -15,6 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (MYTagViewConfig *)shareConfig;
 
+/// 是否可以选中 (默认可以)
+@property (nonatomic, assign) BOOL selectMark;
+/// 是否多选 (NO 单选，YES 多选，默认多选) 
+@property (nonatomic, assign) BOOL multipleMark;
+
 @property (nonatomic) UIEdgeInsets  contentInsets;
 /// 文件距离item左右的距离
 @property (nonatomic, assign) CGFloat       textMargin;
@@ -59,13 +64,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// 滚动方向
 @property (nonatomic) UICollectionViewScrollDirection scrollDirection; // default is UICollectionViewScrollDirectionVertical
 /// 是否分页
-@property (nonatomic, assign) BOOL pagingEnabled;
+@property (nonatomic, assign) BOOL          pagingEnabled;
 /// 单页行数
-@property (nonatomic, assign) NSInteger rowCount;
+@property (nonatomic, assign) NSInteger     rowCount;
 /// 单页列数
-@property (nonatomic, assign) NSInteger columnCount;
+@property (nonatomic, assign) NSInteger     columnCount;
 /// 是否显示分页控件
-@property (nonatomic, assign) BOOL showPageControl;
+@property (nonatomic, assign) BOOL          showPageControl;
+
 @end
 
 NS_ASSUME_NONNULL_END
