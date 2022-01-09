@@ -39,8 +39,8 @@
     _type = type;
     self.config = [MYTagViewConfig new];
     if (type == TagType_radio) {
-         self.config.selectMark = YES;
-       self.config.multipleMark = NO;
+        self.config.selectMark = YES;
+        self.config.multipleMark = NO;
     }else if (type == TagType_check) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             MYTagFlowViewModel *model = [MYTagFlowViewModel new];
@@ -75,7 +75,7 @@
         self.recordView.delegate = self;
     }else if (type == TagType_menu) {
         self.config.itemHeight = MY(70);
-        self.config.itemTopMargin = 0;
+        self.config.itemTopMargin = 5;
         self.config.pagingEnabled = YES;
         self.config.rowCount = 2;
         self.config.columnCount = 5;
@@ -84,9 +84,10 @@
         CGFloat width = (SCREEN_WIDTH-((self.config.columnCount+1)*MY_PADDING_RIGHT))/self.config.columnCount;
         self.config.itemWidth = width;
         self.config.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        self.config.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         self.config.pagingEnabled = YES;
         self.recordView.delegate = self;
+        self.config.selectMark = NO;
+        self.config.multipleMark = NO;
     }
 
 }
