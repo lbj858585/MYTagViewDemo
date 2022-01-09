@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL selectMark;
 /// 是否多选 (NO 单选，YES 多选，默认多选) 
 @property (nonatomic, assign) BOOL multipleMark;
-/// 内边距 
+/// 内边距
 @property (nonatomic) UIEdgeInsets  contentInsets;
 /// 文件距离item左右的距离
 @property (nonatomic, assign) CGFloat       textMargin;
